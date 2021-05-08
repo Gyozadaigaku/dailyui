@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background: #fdd4d4;
+  height: 100vh;
+  position: relative;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+#petal1,
+#petal2,
+#petal3,
+#petal4 {
+  animation: petal 1.5s ease-in-out 2s forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+  opacity: 0;
+}
+
+@keyframes petal {
+  from {
+    transform: rotateZ(0deg) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: rotateZ(360deg) scale(1);
+    opacity: 1;
+  }
+}
+
+#leaf1,
+#leaf2,
+#leaf3,
+#leaf4 {
+  animation: leaf 2s ease-in-out;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes leaf {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#fukuyama,
+#hometown {
+  animation: text 2s ease-in-out 4s forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+  opacity: 0;
+}
+
+@keyframes text {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
